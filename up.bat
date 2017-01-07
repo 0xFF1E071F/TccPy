@@ -7,7 +7,7 @@ git config --global credential.helper store
 
 git remote add q https://github.com/qgb/tccpy
 git remote add cq https://coding.net/u/qgb/p/tccpy/git
-git add -A
+git add -A 
 git commit -m %*
 git push cq master 
 git push q master 
