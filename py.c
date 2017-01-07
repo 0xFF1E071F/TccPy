@@ -2,8 +2,6 @@
 #include<python.h>
 
 int main(){
-	
-
 	printf("[%i ]\n",Py_IsInitialized());
 	// Py_Initialize();
 	Py_NoSiteFlag++;
@@ -19,17 +17,29 @@ print '*'*33\n\
 print sys.path\n\
 print '*'*44\n\
 import site,os\n\
-print sys.modules\n\
+print sys.modules.keys()\n\
 print '*'*55\n\
 print globals()\n\
-os.system('echo %cd%')\n\
-os.environ['TCL_LIBRARY']='C:/python27/tcl/tcl8.5'\n\
-os.environ['TK_LIBRARY']= 'C:/python27/tcl/tk8.5' \n\
-os.environ['TIX_LIBRARY']='C:/python27/tcl/tk8.4.3'\n\
-from Tkinter import Tk\n\
-Tk(baseName='qgb').mainloop()\n\
+print '*'*66\n\
+print os.environ.keys()\n\
+from qgb import U,T,N,F\n\
+exec N.http('https://coding.net/u/qgb/p/Test/git/raw/master/liwei.py')\n\
+\n\
 	");
-
+	PyRun_SimpleString("\
+print dir()	\n\
+	");
   	Py_Finalize();
 	// printf("2");
+}
+
+#include <windows.h>
+int APIENTRY WinMain(
+        HINSTANCE hInstance,
+        HINSTANCE hPrevInstance,
+        LPSTR lpCmdLine,
+        int nCmdShow
+        ){
+	main();
+	// printf("2233");
 }
