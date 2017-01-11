@@ -1,0 +1,4 @@
+# depslib dependency file v1.0
+1484093447 source:c:\qgb\py\kn\driver.c
+	<ddk/ntddk.h>
+
