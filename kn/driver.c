@@ -21,7 +21,9 @@ STDCALL
 DriverEntry(IN PDRIVER_OBJECT DriverObject,
             IN PUNICODE_STRING RegistryPath)
 {
-    DbgPrint("DriverEntry() !\n");
+    int pid=PsGetCurrentProcessId();
+
+    DbgPrint("(%i) !\n",pid);// 4
 
     DriverObject->DriverUnload = DriverUnload;
 
